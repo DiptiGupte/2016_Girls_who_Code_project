@@ -218,7 +218,8 @@ batman_list = pygame.sprite.Group()
 
 
 
-
+batman = RunnerSprite()
+batman_list.add(batman)
 
 # -------- Main Program Loop ------------------------------------------------------------------------------------------------------------
 while not done:
@@ -249,8 +250,6 @@ while not done:
 	mouse_position = pygame.mouse.get_pos()
 	if pressed[0] == 1:
 		print("Here!")
-		batman = RunnerSprite()
-		batman_list.add(batman)
 		#class is just a blueprint whereas object is an actual thing
 		batman_list.draw(screen)
 		#batmanRunner.show()
