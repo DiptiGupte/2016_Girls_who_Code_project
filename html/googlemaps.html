@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>My Favorite Places</h3>
+    <div id="map"></div>
+	<script>
+		function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: {lat: 44.540, lng: -78.546},
+            zoom: 8
+        });
+      }
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?&callback=initMap">
+    </script>
+	
+	<script>
+	
+	function initMap() {
+	var myLatlng = new google.maps.LatLng(37.714444,-122.032433);
+	var Disneyland= {lat: 33.815458, lng:-117.923586};
+	var UK= {lat: 55.378051, lng:-3.435973};
+	var India= {lat: 19.218331, lng:72.978090};
+	var NewYork= {lat: 40.712784, lng:-74.005941};
+	var canada= {lat: 49.282729, lng:-123.120738};
+	var belgium= {lat: 50.503887, lng:4.469936};
+
+	
+	var map = new google.maps.Map(document.getElementById('map'), {
+	  zoom: 2,
+	  center: myLatlng
+	});
+	
+	var contentString1 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Castro Valley, CA</h1>'+
+      '<div id="bodyContent">'+
+      '<p>This is one of my favorite places because ' +
+      'it is my home.'+
+      '</div>'+
+	  '</div>';
+
+	var infowindow1 = new google.maps.InfoWindow({
+		content: contentString1
+	});
+	
+	var contentString2 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Disneyland</h1>'+
+      '<div id="bodyContent">'+
+      '<p>This is one of my favorite places because ' +
+      'it is the happiest place on earth!'+
+      '</div>'+
+	  '</div>';
+
+	var infowindow2 = new google.maps.InfoWindow({
+		content: contentString2
+	});
+	
+	var contentString3 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">UK</h1>'+
+      '<div id="bodyContent">'+
+      '<p>This is one of my favorite places because ' +
+      ',when I visited here with my family, I really enjoyed it and had a lot of fun!'+
+      '</div>'+
+	  '</div>';
+
+	var infowindow3 = new google.maps.InfoWindow({
+		content: contentString3
+	});
+	
+	var contentString4 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Thane, India</h1>'+
+      '<div id="bodyContent">'+
+      '<p>This is one of my favorite places because ' +
+      'most of my family, including my grandparents, live there.'+
+      '</div>'+
+	  '</div>';
+
+	var infowindow4 = new google.maps.InfoWindow({
+		content: contentString4
+	});
+	
+	var contentString5 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">New York, New York</h1>'+
+      '<div id="bodyContent">'+
+      '<p>This is one of my favorite places because ' +
+      'I had a lot of fun shopping and visiting this it.'+
+      '</div>'+
+	  '</div>';
+
+	var infowindow5 = new google.maps.InfoWindow({
+		content: contentString5
+	});
+	
+	var contentString6 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Vancouver, Canada</h1>'+
+      '<div id="bodyContent">'+
+      '<p>This is one of my favorite places because ' +
+      ',while I was here, my sister and I were able to do ziplining for the first time.'+
+      '</div>'+
+	  '</div>';
+
+	var infowindow6 = new google.maps.InfoWindow({
+		content: contentString6
+	});
+	
+	var contentString7 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Belgium, Germany</h1>'+
+      '<div id="bodyContent">'+
+      '<p>This is one of my favorite places because ' +
+      'the food here was amazing!'+
+      '</div>'+
+	  '</div>';
+
+	var infowindow7 = new google.maps.InfoWindow({
+		content: contentString7
+	});
+	
+	var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+	var marker1 = new google.maps.Marker({
+		position: myLatlng,
+		map: map,
+		icon: image
+	});
+	
+	var marker2 = new google.maps.Marker({
+		position: Disneyland,
+		map: map,
+		icon: image
+	});
+	
+	var marker3 = new google.maps.Marker({
+			position: UK,
+			map: map,
+			icon: image
+	});	
+	
+	var marker4 = new google.maps.Marker({
+			position: India,
+			map: map,
+			icon: image
+	});	
+	
+	var marker5 = new google.maps.Marker({
+			position: NewYork,
+			map: map,
+			icon: image
+	});	
+	
+	var marker6 = new google.maps.Marker({
+			position: canada,
+			map: map,
+			icon: image
+	});	
+	
+	var marker7 = new google.maps.Marker({
+			position: belgium,
+			map: map,
+			icon: image
+	});
+	
+	
+	marker1.addListener('click', function() {
+		infowindow1.open(map, marker1);
+	});
+	
+	marker2.addListener('click', function() {
+		infowindow2.open(map, marker2);
+	});
+	
+	marker3.addListener('click', function() {
+		infowindow3.open(map, marker3);
+	});
+	
+	marker4.addListener('click', function() {
+		infowindow4.open(map, marker4);
+	});
+	
+	marker5.addListener('click', function() {
+		infowindow5.open(map, marker5);
+	});
+	
+	marker6.addListener('click', function() {
+		infowindow6.open(map, marker6);
+	});
+	
+	marker7.addListener('click', function() {
+		infowindow7.open(map, marker7);
+	});
+	}
+	</script>
+	
+  </body>
+</html>
