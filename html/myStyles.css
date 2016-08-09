@@ -1,0 +1,55 @@
+h1{
+	color: white;
+	text-align: center;
+		
+}
+
+h2{
+	text-align: center;
+}
+
+#python{
+	color: white;
+}
+
+#list{
+	color: white
+}
+
+#scratch{
+	color: white
+}
+
+#list2{
+	color: white
+}
+
+#c{
+	color: white
+}
+
+#list3{
+	color: white
+}
+
+#color{
+	color: white
+}
+
+
+body{ 
+	background-color: grey;
+}
+
+p{
+	border-style: solid;
+	border-bottom-style: dotted;
+	border-color: teal;
+	border-right: dotted;
+	border-color: teal;
+	border-left: dotted;
+	border-color: teal;
+	border-top: dotted;
+	border-color: teal;
+}
+}
